@@ -15,45 +15,260 @@
 </head>
 
 <body>
-    <header class="max-w-screen-2xl mt-6 mx-[140px]">
+    <header class="max-w-screen-2xl mt-6 ">
         <!-- banner div -->
-        <div class="flex justify-between bg-green-500 rounded-[16px] p-4 shadow">
+        <div class="flex justify-between bg-[#F4F7FF] rounded-[16px] p-4 shadow">
             <!-- icon & tittle container -->
             <div class="flex p-4">
                 <img src="assets/logo.png" alt="">
-            
+
                 <h4 class="pt-1 pl-3 text-4xl font-light">
                     Dev<span class="text-[35.67px] font-bold text-[#00303C]
                     ">Board</span>
                 </h4>
-               
+
             </div>
 
             <!-- number & color platte container -->
             <div class="flex justify-between w-[13%]">
                 <!-- icon & number container -->
-                <div class="flex items-center ">
-                    <img class="w-[32px] h-[32px]"  src="assets/checkbox.png" alt="">
+                <div
+                    class=" flex items-center gap-2 rounded-[2.5rem] bg-[#FFF] pl-[16px] pr-[11px] pt-[2px]  h-[57px] mt-[13px]">
+                    <img class="w-[32px] h-[32px]" src="assets/checkbox.png" alt="">
+                    <h1 id="taskCompleted" class="text-[32px] font-bold w-[34px] h-[51px]">23</h1>
 
                 </div>
-                <div class="flex items-center rounded-full bg-[#F4F7FF] 
-            pl-[9px] pr-[9px] pt-[24px] pb-0 
-            h-[60px] border-b-[25px] mt-[11px]">
-
+                <div class="flex items-center rounded-full bg-[#FFF] 
+                            pl-[9px] pr-[9px] pt-[24px] pb-0 
+                            h-[60px] border-b-[25px] mt-[11px]">
 
                     <img class="  w-[40px] h-[40px]" src="assets/theme-btn.png" alt="">
                 </div>
-                
+
             </div>
         </div>
 
     </header>
-    <main>
+    <main class=" py-8">
+        <!-- banner div -->
+        <div class="flex justify-between gap-4  ">
+            <!-- first part -->
+            <div class="w-[1167px] bg-amber-600 rounded-lg ">
+                <!-- Task Banner -->
+                <div class="flex justify-between mb-8">
+                    <!-- Task Assigned section -->
+                    <section class="w-[263px] h-[128px] flex justify-evenly rounded-lg bg-[#F4F7FF] m-6 ">
+                        <div
+                            class="w-[64px] h-[64px] flex items-center justify-center rounded-full bg-[#FFF] m-8 -ml-1 -mr-2">
+                            <img class="w-[28px] h-[28px]" src="assets/checkbox.png" alt="">
+                        </div>
+
+                        <!-- Task Assigned Tittle -->
+                        <div>
+                            <p class="mt-[34px]">Task Assigned</p>
+                            <h1 id="taskExist" class="text-[32px] font-bold">05</h1>
+
+                        </div>
+
+                    </section>
+                    <!-- Discover something section -->
+                    <section class="mt-6 flex justify-center items-center w-[524px] h-[129px] flex-shrink-0 rounded-[16px] bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]
+                    ">
+                        <!-- Discover something section image -->
+                        <div class="-ml-[40px] pr-3">
+                            <img src="assets/board.png" alt="">
+                        </div>
+                        <!-- Discover something section Tittle -->
+                        <div class=" w-[298px]">
+                            <h4 class="text-white  text-[24px] font-medium mr-8
+                            ">Discover Something New Today!</h4>
+                        </div>
+
+                    </section>
+                    <!-- date section container -->
+                    <section
+                        class="mt-6 flex justify-center items-center w-[263px] h-[128px]  rounded-lg bg-[#F4F7FF] m-6 ">
+                        <!-- calender icon -->
+                        <div
+                            class="w-[64px] h-[64px] flex items-center justify-center rounded-full bg-[#FFF] m-8 ml-6 mr-2 ">
+                            <img class="w-[28px] h-[28px]" src="assets/calender.png" alt="">
+                        </div>
+                        <!-- date -->
+                        <div class="w-[161px] ">
+                            <p id="weekday"></p>
+                            <p id="dateTime"></p>
+                        </div>
+                    </section>
+                </div>
+                <!-- box container -->
+                <div class="ml-6 grid grid-cols-3 gap-9 mr-6">
+                    <!-- box1 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">ShopEase</h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Fix Mobile Button Issue </h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
+                                Chrome DevTools, check for overlappin..</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box2 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-4  pr-[88px] w-[82px] h-[28px] text-base rounded-lg">CloudSync</h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Add Dark Mode </h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Store the
+                                user's preference in localStorage, update CSS varia</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box3 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">SwiftPay</h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Optimize Home page</h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
+                                Chrome DevTools, check for overlappin..</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box4 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-4  pr-12 w-[82px] h-[28px] text-base rounded-lg">Meta</h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Add new emoji 🤲 </h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
+                                Chrome DevTools, check for overlappin..</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box5 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-2  pr-2 w-[97px] h-[28px] text-base rounded-lg block">Google LLC
+                            </h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Integrate OpenAI API </h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
+                                Chrome DevTools, check for overlappin..</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box6 -->
+                    <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
+                        <div class="w-[294px] h-[200px]">
+                            <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">Glassdoar</h5>
+                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Improve Job searching </h3>
+                            <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
+                                Chrome DevTools, check for overlappin..</p>
+                        </div>
+                        <!-- deadline & btn -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="text-[#00303C]">21 March 2025</p>
+
+                            </div>
+                            <div class="mr-4 w-[130px] h-[24px] pr-4 ">
+                                <button id="taskC"
+                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Second part -->
+            <div class="w-[366px] h-[916px] rounded-lg bg-red-700 pl-[106px] pt-6">
+                <!-- activity log icon and tittle and clear container -->
+                <div>
+                    <!-- icon and tittle -->
+                    <div class="flex mt-6px">
+                        <img class="w[24px] h-[24px] pr-1" src="assets/activity.png" alt="">
+                        <h1>Activity Log</h1>
+
+                    </div>
+                    <!-- clear history btn -->
+                    <div>
+                        <button class=" mt-4 py-[10px] px-5 rounded-md bg-[#3752FD] text-blue-50">Clear History</button>
+
+                    </div>
+
+                </div>
+                <!-- comment container -->
+                <div id="comment" class="w-[298px] h-[48px]">
+
+
+                </div>
+
+            </div>
+
+        </div>
 
     </main>
     <footer>
 
     </footer>
 </body>
+<script src="date.js"></script>
 
 </html>
