@@ -14,10 +14,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header class="max-w-screen-2xl mt-6 ">
+<body class="bg-[#F4F7FF]">
+    <header class="max-w-screen-2xl mt-6  ">
         <!-- banner div -->
-        <div class="flex justify-between bg-[#F4F7FF] rounded-[16px] p-4 shadow">
+        <div class="flex justify-between bg-[#FFF] rounded-[16px] p-4 shadow">
             <!-- icon & tittle container -->
             <div class="flex p-4">
                 <img src="assets/logo.png" alt="">
@@ -41,19 +41,21 @@
                 <div class="flex items-center rounded-full bg-[#FFF] 
                             pl-[9px] pr-[9px] pt-[24px] pb-0 
                             h-[60px] border-b-[25px] mt-[11px]">
+                    <button id="colorChanger">
+                        <img class="  w-[40px] h-[40px]" src="assets/theme-btn.png" alt="">
+                    </button>
 
-                    <img class="  w-[40px] h-[40px]" src="assets/theme-btn.png" alt="">
                 </div>
 
             </div>
         </div>
 
     </header>
-    <main class=" py-8">
+    <main class=" py-8 ">
         <!-- banner div -->
         <div class="flex justify-between gap-4  ">
             <!-- first part -->
-            <div class="w-[1167px] bg-amber-600 rounded-lg ">
+            <div class="w-[1167px] bg-[#FFF] rounded-lg ">
                 <!-- Task Banner -->
                 <div class="flex justify-between mb-8">
                     <!-- Task Assigned section -->
@@ -106,7 +108,7 @@
                     <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">ShopEase</h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Fix Mobile Button Issue </h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Fix Mobile Button Issue </h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
                                 Chrome DevTools, check for overlappin..</p>
                         </div>
@@ -118,8 +120,8 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                    class=" taskC bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +129,7 @@
                     <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-4  pr-[88px] w-[82px] h-[28px] text-base rounded-lg">CloudSync</h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Add Dark Mode </h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Add Dark Mode </h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Store the
                                 user's preference in localStorage, update CSS varia</p>
                         </div>
@@ -139,8 +141,9 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                class="taskC bg-[#3752FD] rounded-lg text-white px-5 py-1 opacity-50 " 
+                                disabled>Completed</button>
                             </div>
                         </div>
                     </div>
@@ -148,7 +151,7 @@
                     <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">SwiftPay</h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Optimize Home page</h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Optimize Home page</h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
                                 Chrome DevTools, check for overlappin..</p>
                         </div>
@@ -160,8 +163,8 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                    class=" taskC bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1  ">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -169,7 +172,7 @@
                     <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-4  pr-12 w-[82px] h-[28px] text-base rounded-lg">Meta</h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Add new emoji 🤲 </h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Add new emoji 🤲 </h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
                                 Chrome DevTools, check for overlappin..</p>
                         </div>
@@ -181,8 +184,8 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                    class=" taskC bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -191,7 +194,7 @@
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-2  pr-2 w-[97px] h-[28px] text-base rounded-lg block">Google LLC
                             </h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Integrate OpenAI API </h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Integrate OpenAI API </h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
                                 Chrome DevTools, check for overlappin..</p>
                         </div>
@@ -203,8 +206,8 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                    class=" taskC bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -212,7 +215,7 @@
                     <div class="w-[342px] h-[317px] bg-[#F4F7FF] pl-6 pt-6 rounded-xl">
                         <div class="w-[294px] h-[200px]">
                             <h5 class="bg-[#FFF] pl-4  pr-20 w-[82px] h-[28px] text-base rounded-lg">Glassdoar</h5>
-                            <h3 class="text-2xl my-4  tracking-wide text-[#00303C] ">Improve Job searching </h3>
+                            <h3 id="taskName" class="text-2xl my-4  tracking-wide text-[#00303C] ">Improve Job searching </h3>
                             <p class="w-[262px] h-[80px] p-4 bg-[#FFF] rounded-lg text-base text-[#00303C] ">Debug using
                                 Chrome DevTools, check for overlappin..</p>
                         </div>
@@ -224,8 +227,8 @@
 
                             </div>
                             <div class="mr-4 w-[130px] h-[24px] pr-4 ">
-                                <button id="taskC"
-                                    class=" bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
+                                <button 
+                                    class=" taskC bg-[#3752FD] rounded-lg text-[#ffff] px-5 py-1 ">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -238,18 +241,18 @@
 
 
             <!-- Second part -->
-            <div class="w-[366px] h-[916px] rounded-lg bg-red-700 pl-[106px] pt-6">
+            <div class="w-[366px] h-[916px] rounded-lg bg-red-700  pt-6">
                 <!-- activity log icon and tittle and clear container -->
                 <div>
                     <!-- icon and tittle -->
-                    <div class="flex mt-6px">
+                    <div class="flex mt-6px  gap-2 justify-center">
                         <img class="w[24px] h-[24px] pr-1" src="assets/activity.png" alt="">
-                        <h1>Activity Log</h1>
+                        <h1 >Activity Log</h1>
 
                     </div>
                     <!-- clear history btn -->
-                    <div>
-                        <button class=" mt-4 py-[10px] px-5 rounded-md bg-[#3752FD] text-blue-50">Clear History</button>
+                    <div class="flex justify-center">
+                        <button class="  mt-4 py-[10px] px-5 rounded-md bg-[#3752FD] text-blue-50">Clear History</button>
 
                     </div>
 
@@ -269,6 +272,6 @@
 
     </footer>
 </body>
-<script src="date.js"></script>
+<script src="script.js"></script>
 
 </html>
